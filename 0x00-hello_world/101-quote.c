@@ -1,6 +1,6 @@
 #include <unistd.h>
 /**
- * 
+ *main - out puts a text 
  *Return: Always 0 (Successful)
  */
 int main (void)
