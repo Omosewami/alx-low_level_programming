@@ -2,14 +2,14 @@
 
 /**
  * prints_last_digit -  print last digit
- * @n: the number
+ * @ldigit: the number
  * Return: the value of last digit
  */
 int print_last_digit(int n)
 {
 	int ldigit = n  % 10;
 
-	if (ldigit <0)
+	if (ldigit < 0)
 		ldigit *= -1;
 
 	_putchar(ldigit + '0');
