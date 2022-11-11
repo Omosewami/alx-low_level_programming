@@ -12,21 +12,28 @@
  */
 int *array_range(int min, int max)
 {
-	int *array, index, size;
+	/*declare pointer to be used*/
+	int *arr;
+	int i;
+	int range;
 
+	/*verify that min is less than max*/
 	if (min > max)
 		return (NULL);
 
-	size = max - min + 1;
+	range = (max - min) + 1;
+	/*reserve space in heap for the array*/
+	arr = malloc(sizeof(int) * range);
 
-	array = malloc(sizeof(int) * size);
-
-	if (array == NULL)
+	/*verify that malloc did not fail*/
+	if (arr == NULL)
 		return (NULL);
 
-	for (index = 0; index < size; index++)
-		array[index] = min++;
+	/*fill memory with values ranging from min to max inclusive*/
+	for (i = 0; i < range; i++)
+	{
+		arr[i] = min++;
+	}
 
-	return (array);
-
+	return (arr);
 }
